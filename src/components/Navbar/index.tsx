@@ -86,12 +86,12 @@ export default function Navbar({ title }: NavbarProps) {
                   as="a"
                   href={item.to}
                   className={classNames(
-                    item.current
+                    item.to === pathname
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={item.to === pathname ? "page" : undefined}
                 >
                   {item.label}
                 </Disclosure.Button>
