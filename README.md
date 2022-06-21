@@ -11,3 +11,6 @@
 
 1. Run this command `git pull`
 2. Run this command `npm install` if they are new dependencies/packages
+
+##Footer
+1. Footer code is available but cant seem to deploy it successfully. 
