@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import HowToPlayPage from "./pages/HowToPlayPage";
 
+
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -10,6 +13,7 @@ function App() {
         <Route path="/how-to-play" element={<HowToPlayPage />} />
       </Routes>
     </BrowserRouter>
+    
   );
 }
 
