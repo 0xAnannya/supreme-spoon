@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useRef} from 'react'
 
 
 const Game = () => {
@@ -10,10 +10,12 @@ const Game = () => {
   const [result, setResult] = useState('Let\'s see who wins')
   const [gameOver, setGameOver] = useState(false)
   const choices = ['rock', 'paper', 'scissors']
+  const roundRef = useRef(0);
 
   const handleClick = (value:string):void => {
     setUserChoice(value)    
     generateComputerChoice()
+    roundRef.current++;
   }
 
   const generateComputerChoice = ():void => {
@@ -29,6 +31,7 @@ const Game = () => {
     setTurnResult("");
     setResult('Let\'s see who wins');
     setGameOver(false);
+    roundRef.current = 0;
     
     }
 
@@ -84,11 +87,11 @@ const Game = () => {
            { choice } 
           </button>
       )}
-
+    <div >Round {roundRef.current} </div> 
         <div >
           you Chose : {userChoice} </div>
         <div>  Computer Chose: {computerChoice}</div>
-              <h1>Turn Result: {turnResult} </h1> 
+      <h1>Turn Result: {turnResult} { } </h1> 
                
         <h1>Final Result: {result}</h1>
         
