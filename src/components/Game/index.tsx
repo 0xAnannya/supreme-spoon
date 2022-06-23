@@ -77,18 +77,21 @@ const Game = () => {
     <div>
         <h1>User Points: {userPoints}</h1>
         <h1>Computer Points: {computerPoints}</h1>
-        <h1>BUTTONS </h1>
+        <h1> </h1>
         {choices.map((choice, index) =>
-          <button  key={index} onClick={() => handleClick(choice)} disabled={gameOver}>
+          <button className='transition ease-in-out delay-150 bg-teal-500 hover: -translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300  text-white font-bold py-2 px-4 m-2 rounded '
+            key={index} onClick={() => handleClick(choice)} disabled={gameOver}>
            { choice } 
           </button>
-        )}
+      )}
+
         <div >
-              <h1>you Chose : {userChoice}        Computer Chose: {computerChoice }</h1>
+          you Chose : {userChoice} </div>
+        <div>  Computer Chose: {computerChoice}</div>
               <h1>Turn Result: {turnResult} </h1> 
                
         <h1>Final Result: {result}</h1>
-        </div>
+        
       
       <div >
         {gameOver && 
