@@ -1,4 +1,3 @@
-import { Listbox } from '@headlessui/react'
 import { useEffect, useState } from 'react'
 
 
@@ -23,7 +22,14 @@ const Game = () => {
   }
 
   const reset = () => {
-    window.location.reload()
+    setUserChoice("");
+    setComputerChoice("");
+    setComputerPoints(0);
+    setUserPoints(0);
+    setTurnResult("");
+    setResult('Let\'s see who wins');
+    setGameOver(false);
+    
     }
 
     
