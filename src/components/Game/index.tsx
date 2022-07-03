@@ -77,7 +77,7 @@ const Game = () => {
   }, [computerChoice, userChoice])
 
   return (
-    <div>
+    <div >
         <h1>User Points: {userPoints}</h1>
         <h1>Computer Points: {computerPoints}</h1>
         <h1> </h1>
@@ -87,10 +87,10 @@ const Game = () => {
            { choice } 
           </button>
       )}
-    <div >Round {roundRef.current} </div> 
+    <div  >Round {roundRef.current} </div> 
         <div >
-          you Chose : {userChoice} </div>
-        <div>  Computer Chose: {computerChoice}</div>
+          you Chose : {userChoice } </div>
+           <div >Computer Chose: {computerChoice}</div>
       <h1>Turn Result: {turnResult} { } </h1> 
                
         <h1>Final Result: {result}</h1>
