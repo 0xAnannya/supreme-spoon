@@ -5,6 +5,7 @@ import HowToPlayPage from "./pages/HowToPlayPage";
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
